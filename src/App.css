@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+/* ---Mobile--- */
+@media only screen and (max-width: 740px) {
+    body{
+        width: 100%;
+    }
+    
+    #root{
+        width: 100%;
+    }
+}

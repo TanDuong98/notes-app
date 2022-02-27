@@ -1,0 +1,173 @@
+.listDay{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.day{
+    width: 80%;
+    background-color: #636e72;
+    color: #f5f6fa;
+    margin: 5px 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+.inforDay{
+
+}
+
+.headingDay{
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #34495e;
+}
+
+.headingDay > p{
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+
+.optionBtn{
+    padding: 0 15px;
+    position: relative;
+}
+
+
+/* .optionContainer:hover .option{
+    transform: translateX(-20%);
+}  */
+
+.option{
+    position: absolute;
+    right: 28px;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50px);
+    transition: all 0.2s ease;
+    height: 34px;
+    padding: 0 10px;
+    background-color: #34495e;
+}
+
+
+.optionBtn.active ~ .option{
+    transform: translateY(0);
+}
+.closeBtn,
+.optionBtn.active .barBtn{
+    display: none;
+}
+
+.optionBtn.active .closeBtn{ 
+    display: block;
+}
+
+.barBtn,
+.closeBtn{
+    cursor: pointer;
+}
+
+
+
+.editDay,
+.removeDay{
+    margin: 0 5px;
+}
+
+
+
+
+/* -------List Job -------- */
+.listJob{
+    padding: 10px 20px 5px 30px;
+
+}
+
+.job{
+    list-style-type: decimal;
+    padding: 0 5px;
+    position: relative;
+    font-size: 14px;
+}
+
+.job > span{
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.removeJob{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: none;
+}
+
+.removeJob.active{
+    display: block;
+}
+
+/* ------Footer day--------- */
+.footerDay{
+    display: flex;
+    margin-top: 10px;
+    margin: 8px 5px;
+    padding: 0 5px;
+    transform: translateY(40px);
+    transition: all 0.2s ease;
+}
+
+.day:hover .footerDay{
+    transform: translateY(0);
+
+}
+
+.inputJob{
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #4b5255;
+    border-radius: 10px;
+    padding: 0 10px;
+    color: #ecf0f1;
+    margin-right: 10px;
+    outline: none;
+}
+
+.jobBtn{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0.1px 6px 8px 2px rgb(0 0 0 / 20%);
+
+}
+
+.jobBtn i{
+    font-size: 24px;
+    color: #ecf0f1;
+}
+
+
+@media only screen and (max-width: 740px) {
+	.day{
+        width: 100%;
+    }
+}
