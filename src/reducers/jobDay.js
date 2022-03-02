@@ -1,12 +1,5 @@
 
 
-// const initState = {
-//     inputDay: "",
-//     dayList: ["day 1", "day 2", "day 3"],
-//     inputJobInDay: [],
-//     jobInDay: [["don nha", "quet nha"], ["lau nha", "rua chen"], []]
-// }
-
 const initialState = {
     inputDay: "",
     listDay: []
@@ -29,7 +22,6 @@ const jobDayReducer = (state = initialState, action) => {
                 listJob: [],
             }
             newAddDay.push(newDay)
-            console.log(newAddDay)
            
             return {
                 ...state,
@@ -68,11 +60,7 @@ const jobDayReducer = (state = initialState, action) => {
                 ...state,
                 listDay: newRemoveJob
             }
-        
-        // case "REMOVE_JOB":
-           
-        //     return 1
-        
+            
         default: 
             return state
     }
