@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage.jsx";
 function App() {
   console.log("a");
   console.log("Nhanh Tan moi co");
+  console.log("Nhanh Tan moi co 2");
   return <HomePage />;
 }
 
