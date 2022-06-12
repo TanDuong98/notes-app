@@ -8,6 +8,7 @@ function App() {
   console.log("Nhanh Tan moi co");
   console.log("Nhanh Tan moi co 2");
   console.log("Nhanh Tan moi co 3");
+  console.log("Nhanh Tan moi co 4");
   return <HomePage />;
 }
 
