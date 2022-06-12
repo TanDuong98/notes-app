@@ -10,6 +10,7 @@ function App() {
   console.log("Nhanh Tan moi co 3");
   console.log("Nhanh Tan moi co 4");
   console.log("Nhanh Tan moi co 5");
+  console.log("Nhanh Tan moi co 6");
   return <HomePage />;
 }
 
