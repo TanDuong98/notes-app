@@ -2,6 +2,8 @@ import clsx from 'clsx';
 import React, { useEffect, useState, useRef } from 'react'
 import { PropTypes } from 'prop-types'
 import styles from './jobDayList.module.css'
+import axios from 'axios';
+import dayApi from '../../../api/dayAPI';
 
 
 JobDayList.propTypes = {
@@ -14,6 +16,39 @@ JobDayList.defaultProps = {
 };
 
 function JobDayList(props) {
+
+    const [dayList, setDayList] = useState([])
+
+    useEffect(() => {
+        const fetchDayList = async () => {
+            try {
+                const response = await dayApi.getAll()
+                console.log(response)
+                const arr = [];
+                for (let i of response) {
+                if (!arr.includes(i.joB_IN_DAY)) {
+                    arr.push(i.joB_IN_DAY);
+                }
+                }
+
+                const result = [];
+                for (let i of arr) {
+                const input = [];
+                for (let x of response) {
+                    if (x.joB_IN_DAY === i) {
+                    input.push(x.job);
+                    }
+                }
+                result.push({ title: i, listJob: input });
+                }
+                setDayList(result)
+            } catch (error) {
+                console.log('Fail to fetch product list: ', error)
+            }
+        }
+        fetchDayList();
+    }, [])
+    
     const {listDay, handleDay, handleJob} = props
 
     const [jobActive, setJobActive] = useState("")
@@ -29,9 +64,10 @@ function JobDayList(props) {
         handleDay(data)
     }
 
+
     return (
         <div className={styles.listDay}>
-            {listDay.map((day, index) => (
+            {dayList.map((day, index) => (
                 <div key={index} className={clsx(styles.day)}>
                     
                         <div className={styles.headingDay}>

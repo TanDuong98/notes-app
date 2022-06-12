@@ -11,6 +11,8 @@ function HomePage() {
     const inputDay = useSelector(state => state.jobDayReducer.inputDay)
     const listDay = useSelector(state => state.jobDayReducer.listDay)
     // const listDay = useSelector(state => state.jobDayReducer.listDay)
+
+    
     const dispatch = useDispatch()
     
     const handleDay = (data) => {
