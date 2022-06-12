@@ -11,6 +11,7 @@ function App() {
   console.log("Nhanh Tan moi co 4");
   console.log("Nhanh Tan moi co 5");
   console.log("Nhanh Tan moi co 6");
+  console.log("Nhanh Tan moi co 7");
   return <HomePage />;
 }
 
